@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://www.unicusvision.com/product-print-inspection.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Inspection Systems | Unicus Vision</title>
+    <meta name="description" content="Automated print quality inspection for packaging, labels & flexible materials. Detect defects, color shifts & registration errors in real-time.">
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        .page-hero { margin-top: 70px; background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%); padding: 5rem 2rem; position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: var(--primary-orange); opacity: 0.06; border-radius: 50%; }
+        .hero-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-text h1 { font-size: 2.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.2; }
+        .hero-text h1 span { color: var(--primary-orange); }
+        .hero-text p { font-size: 1.15rem; color: var(--dark-gray); margin-bottom: 2rem; }
+        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+        .stat-badge { background: var(--white); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); text-align: center; }
+        .stat-badge strong { display: block; font-size: 1.8rem; color: var(--primary-orange); font-weight: 700; }
+        .stat-badge span { font-size: 0.9rem; color: var(--dark-gray); }
+        .hero-visual { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md); text-align: center; }
+        
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.3rem; color: var(--text-dark); margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-header h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 70px; height: 4px; background: var(--primary-orange); }
+        .section-header p { font-size: 1.1rem; color: var(--dark-gray); max-width: 750px; margin: 1.5rem auto 0; }
+        
+        .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .use-case-card { background: var(--white); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary-orange); transition: var(--transition); }
+        .use-case-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .use-case-card h3 { font-size: 1.4rem; color: var(--text-dark); margin: 1rem 0; }
+        .industry-tag { display: inline-block; background: var(--light-gray); color: var(--primary-orange); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        .use-case-card ul { list-style: none; margin: 1.5rem 0; }
+        .use-case-card li { padding: 0.4rem 0; color: var(--dark-gray); padding-left: 1.5rem; position: relative; font-size: 0.95rem; }
+        .use-case-card li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-orange); font-weight: bold; }
+        .result-highlight { background: var(--light-gray); padding: 1rem 1.5rem; border-radius: 8px; margin-top: 1.5rem; font-weight: 600; color: var(--text-dark); }
+        .result-highlight span { color: var(--primary-orange); }
+        
+        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .spec-card { background: var(--light-gray); padding: 2rem; border-radius: 10px; text-align: center; }
+        .spec-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .spec-card h4 { color: var(--text-dark); margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .spec-card p { color: var(--dark-gray); font-size: 0.95rem; }
+        
+        .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .benefit-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+        .benefit-icon { width: 60px; height: 60px; background: var(--light-gray); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
+        .benefit-content h4 { color: var(--text-dark); margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .benefit-content p { color: var(--dark-gray); font-size: 0.95rem; }
+        
+        .integration-section { background: var(--light-gray); }
+        .integration-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: center; }
+        .integration-item { padding: 2rem; background: var(--white); border-radius: 10px; box-shadow: var(--shadow-sm); }
+        .integration-item .logo-placeholder { font-size: 2rem; font-weight: 700; color: var(--primary-orange); margin-bottom: 1rem; }
+        
+        .product-cta { background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%); color: var(--white); text-align: center; padding: 5rem 2rem; }
+        .product-cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .product-cta p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.95; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 1rem 2.5rem; border: none; border-radius: 5px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: var(--transition); }
+        .btn-white { background: var(--white); color: var(--primary-orange); }
+        .btn-white:hover { background: var(--light-gray); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-outline-white:hover { background: var(--white); color: var(--primary-orange); }
+        
+        .related-products { background: var(--white); }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .related-card { background: var(--light-gray); border-radius: 10px; padding: 2rem; text-align: center; transition: var(--transition); text-decoration: none; color: var(--text-dark); display: block; }
+        .related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); background: var(--white); }
+        .related-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .related-card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .related-card p { font-size: 0.9rem; color: var(--dark-gray); }
+        
+        @media (max-width: 968px) { .hero-content { grid-template-columns: 1fr; text-align: center; } .hero-stats { justify-content: center; } .use-cases-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .hero-text h1 { font-size: 2rem; } .section-header h2 { font-size: 1.8rem; } .cta-buttons { flex-direction: column; align-items: center; } .btn { width: 100%; max-width: 300px; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">UNICUS<span>VISION</span></a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li class="dropdown">
+                <a href="#">Solutions ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product-label-inspection.html">Label Inspection</a></li>
+                    <li><a href="product-code-readers.html">Code Readers</a></li>
+                    <li><a href="product-print-inspection.html">Print Inspection</a></li>
+                    <li><a href="product-soap-inspection.html">Soap Inspection</a></li>
+                    <li><a href="product-track-trace.html">Track & Trace</a></li>
+                    <li><a href="product-serialization.html">Serialization</a></li>
+                    <li><a href="product-document-digitisation.html">Document Digitisation</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Industries ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
+                    <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
+                    <li><a href="industry-cosmetics.html">Cosmetics</a></li>
+                    <li><a href="industry-fmcg.html">FMCG</a></li>
+                    <li><a href="industry-medical-devices.html">Medical Devices</a></li>
+                    <li><a href="industry-chemicals.html">Chemicals</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#why-us">Why Us</a></li>
+            <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+        </ul>
+    </div>
+</header>
+    
+    <main style="margin-top: 70px;">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Print Inspection: <span>100% Surface Coverage</span> at Production Speed</h1>
+                    <p>Automated vision systems that detect printing defects, color variations, and registration errors across flexible packaging, labels, and cartons—ensuring brand consistency and quality compliance.</p>
+                    <div class="hero-stats">
+                        <div class="stat-badge"><strong>0.05mm</strong><span>Defect Detection</span></div>
+                        <div class="stat-badge"><strong>ΔE &lt; 1.0</strong><span>Color Accuracy</span></div>
+                        <div class="stat-badge"><strong>800m/min</strong><span>Line Speed</span></div>
+                        <div class="stat-badge"><strong>100%</strong><span>Surface Coverage</span></div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-white">Request Demo</a>
+                        <a href="#specs" class="btn btn-outline-white">View Specifications</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div style="font-size: 5rem; margin-bottom: 1rem;">🖨️🔍🎨</div>
+                    <p style="color: var(--dark-gray); font-weight: 500;">Real-time multi-spectral print analysis</p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Color Registration</span>
+                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Defect Classification</span>
+                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Flexible Materials</span>
+                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Real-Time Alerts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>Real-World Use Cases</h2>
+                    <p>How leading brands maintain print quality excellence with Unicus Vision</p>
+                </div>
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <span class="industry-tag">Food Packaging</span>
+                        <h3>Flexible Pouch Print Quality Control</h3>
+                        <p>A snack food manufacturer needed to detect ink smears, color shifts, and misregistration on high-speed flexible pouch lines running at 400 pouches/min.</p>
+                        <ul>
+                            <li>Multi-camera array for full surface coverage</li>
+                            <li>Spectral color analysis (Lab color space)</li>
+                            <li>AI-powered defect classification (smear vs. scratch)</li>
+                            <li>Automatic press adjustment feedback loop</li>
+                        </ul>
+                        <div class="result-highlight">Result: <span>92% reduction</span> in customer complaints; <span>$450K/year saved</span> in waste and rework</div>
+                    </div>
+                    <div class="use-case-card">
+                        <span class="industry-tag">Pharmaceutical Labels</span>
+                        <h3>Regulatory-Compliant Label Printing</h3>
+                        <p>A pharma company required verification of critical text (dosage, warnings) and barcodes on labels while meeting FDA 21 CFR Part 11 documentation requirements.</p>
+                        <ul>
+                            <li>OCR verification of all human-readable text</li>
+                            <li>Barcode grade validation (ISO 15416)</li>
+                            <li>Electronic audit trail with image capture</li>
+                            <li>Role-based access for quality approvals</li>
+                        </ul>
+                        <div class="result-highlight">Result: <span>Zero labeling recalls</span> post-installation; <span>100% audit readiness</span> for regulatory inspections</div>
+                    </div>
+                    <div class="use-case-card">
+                        <span class="industry-tag">Luxury Cosmetics</span>
+                        <h3>Premium Brand Protection on Packaging</h3>
+                        <p>A luxury brand needed to ensure flawless print quality on foil-stamped cartons, detecting micro-defects invisible to the human eye.</p>
+                        <ul>
+                            <li>High-resolution imaging for micro-defect detection</li>
+                            <li>Gold foil coverage & consistency verification</li>
+                            <li>Embossing depth & clarity analysis</li>
+                            <li>Color consistency monitoring across batches</li>
+                        </ul>
+                        <div class="result-highlight">Result: <span>99.95% first-pass yield</span>; <span>eliminated $1.8M/year</span> in brand damage from packaging defects</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications -->
+        <section id="specs" style="background: var(--light-gray);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Specifications</h2>
+                    <p>Engineered for high-speed, high-accuracy print inspection</p>
+                </div>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <div class="icon">📷</div>
+                        <h4>Imaging System</h4>
+                        <p>Line-scan or area-scan cameras; 4K–16K resolution; up to 80 kHz line rate; synchronized multi-camera arrays</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="icon">💡</div>
+                        <h4>Lighting Solutions</h4>
+                        <p>Programmable LED arrays: dome, coaxial, backlight; multi-wavelength (RGB, UV, IR); strobe sync for motion freeze</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="icon">🎨</div>
+                        <h4>Color Analysis</h4>
+                        <p>Spectrophotometer-grade color measurement; ΔE calculation in Lab, LCh, CMYK; tolerance-based pass/fail</p>
+                    </div>
+                    <div class="spec-card">
+                        <div class="icon">🧠</div>
+                        <h4>AI Processing</h4>
+                        <p>Deep learning models for defect classification; on-edge inference; continuous learning from operator feedback</p>
+                    </div>
+                </div>
+                <div style="margin-top: 3rem; background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">Defect Detection Capabilities</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Print Defects</strong>
+                            <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
+                                <li>• Ink smears, splatters, voids</li>
+                                <li>• Misregistration, color bleed</li>
+                                <li>• Banding, streaking, moiré</li>
+                                <li>• Dot gain, ink density variation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Substrate Issues</strong>
+                            <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
+                                <li>• Wrinkles, tears, pinholes</li>
+                                <li>• Surface contamination</li>
+                                <li>• Coating inconsistencies</li>
+                                <li>• Material thickness variation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Quality Metrics</strong>
+                            <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
+                                <li>• Color difference (ΔE)</li>
+                                <li>• Registration accuracy (mm)</li>
+                                <li>• Defect size & location mapping</li>
+                                <li>• Statistical process control charts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Manufacturers Choose Our Print Inspection</h2>
+                </div>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-content">
+                            <h4>Detect Defects Humans Miss</h4>
+                            <p>Advanced imaging and AI identify micro-defects (<0.05mm) and subtle color shifts (ΔE <1.0) invisible to manual inspection.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-content">
+                            <h4>Keep Pace with High-Speed Lines</h4>
+                            <p>Inspect materials moving up to 800 meters/minute with real-time processing and sub-20ms decision time.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔄</div>
+                        <div class="benefit-content">
+                            <h4>Reduce Waste & Rework</h4>
+                            <p>Catch defects early in the process to minimize scrap. Typical waste reduction: 30–60% within first 6 months.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <div class="benefit-content">
+                            <h4>Data-Driven Process Optimization</h4>
+                            <p>Real-time SPC charts and defect trend analysis help identify root causes and optimize press settings proactively.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛡️</div>
+                        <div class="benefit-content">
+                            <h4>Regulatory Documentation Ready</h4>
+                            <p>Automated audit trails with timestamped images and electronic signatures meet FDA, EU, and ISO documentation requirements.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-content">
+                            <h4>Fast ROI Through Quality Gains</h4>
+                            <p>Typical payback in 12–18 months through reduced waste, fewer customer returns, and lower manual QC labor costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Section -->
+        <section class="integration-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Seamless Press & Workflow Integration</h2>
+                    <p>Works with your existing printing and quality management systems</p>
+                </div>
+                <div class="integration-grid">
+                    <div class="integration-item"><div class="logo-placeholder">HEIDELBERG</div><p style="color: var(--dark-gray); font-size: 0.9rem;">Press Control Systems</p></div>
+                    <div class="integration-item"><div class="logo-placeholder">BOBST</div><p style="color: var(--dark-gray); font-size: 0.9rem;">Flexo & Digital Presses</p></div>
+                    <div class="integration-item"><div class="logo-placeholder">SAP</div><p style="color: var(--dark-gray); font-size: 0.9rem;">QM, PP-PI Modules</p></div>
+                    <div class="integration-item"><div class="logo-placeholder">OPC</div><p style="color: var(--dark-gray); font-size: 0.9rem;">OPC UA, MQTT, REST APIs</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="product-cta">
+            <h2>Eliminate Print Quality Issues Before They Reach Customers</h2>
+            <p>Get a free print quality assessment and ROI analysis. See how Unicus Vision can protect your brand and reduce waste.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-white">Schedule Free Assessment</a>
+                <a href="#" class="btn btn-outline-white">Download Print Inspection Guide</a>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complementary Solutions</h2>
+                    <p>Build a complete quality control ecosystem</p>
+                </div>
+                <div class="related-grid">
+                    <a href="product-label-inspection.html" class="related-card">
+                        <div class="icon">🏷️</div>
+                        <h4>Label Inspection</h4>
+                        <p>Verify label application and content alongside print quality</p>
+                    </a>
+                    <a href="product-code-readers.html" class="related-card">
+                        <div class="icon">📊</div>
+                        <h4>Code Readers</h4>
+                        <p>Ensure barcodes and QR codes printed on packaging are scannable</p>
+                    </a>
+                    <a href="product-track-trace.html" class="related-card">
+                        <div class="icon">🔗</div>
+                        <h4>Track & Trace</h4>
+                        <p>Connect print quality data to serialization and supply chain visibility</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>UNICUS VISION</h3>
+                <p>Leading provider of advanced machine vision inspection systems and track & trace solutions for modern manufacturing industries worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="product-label-inspection.html">Label Inspection</a></li>
+                    <li><a href="product-code-readers.html">Code Readers</a></li>
+                    <li><a href="product-print-inspection.html">Print Inspection</a></li>
+                    <li><a href="product-soap-inspection.html">Soap Inspection</a></li>
+                    <li><a href="product-track-trace.html">Track & Trace</a></li>
+                    <li><a href="product-serialization.html">Serialization</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
+                    <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
+                    <li><a href="industry-cosmetics.html">Cosmetics</a></li>
+                    <li><a href="industry-fmcg.html">FMCG</a></li>
+                    <li><a href="industry-medical-devices.html">Medical Devices</a></li>
+                    <li><a href="industry-chemicals.html">Chemicals</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Unicus Vision. All rights reserved. | ISO 9001:2015 Certified | <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+    
+    <script>
+        Promise.all([
+            fetch('header.html').then(r => r.text()),
+            fetch('footer.html').then(r => r.text())
+        ]).then(([headerHTML, footerHTML]) => {
+            document.getElementById('header-container').innerHTML = headerHTML;
+            document.getElementById('footer-container').innerHTML = footerHTML;
+            
+            // Highlight current page in dropdown
+            document.querySelectorAll('.dropdown-menu a').forEach(link => {
+                if(link.getAttribute('href') === 'product-print-inspection.html') {
+                    link.style.color = 'var(--primary-orange)';
+                    link.style.fontWeight = '600';
+                }
+            });
+            
+            // Mobile menu toggle
+            document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+                const nav = document.querySelector('.nav-links');
+                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }).catch(err => console.error('Failed to load components:', err));
+        
+        // Close dropdowns on outside click
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.style.opacity = '0';
+                    menu.style.visibility = 'hidden';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

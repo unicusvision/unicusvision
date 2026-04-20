@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://www.unicusvision.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicus Vision - Advanced Machine Vision & Inspection Systems</title>
+    <meta name="description" content="Leading provider of industrial machine vision inspection systems, track & trace solutions, and serialization systems for manufacturing industries.">
+    <link rel="stylesheet" href="shared-styles.css">
+    <style>
+        /* ===== INDEX PAGE SPECIFIC STYLES ===== */
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: var(--primary-orange);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .hero-content h1 span { color: var(--primary-orange); }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .hero-feature::before {
+            content: '✓';
+            color: var(--primary-orange);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .btn-primary {
+            background: var(--primary-orange);
+            color: var(--white);
+        }
+        .btn-primary:hover {
+            background: var(--dark-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(232, 93, 43, 0.3);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+        }
+        .btn-secondary:hover {
+            background: var(--primary-orange);
+            color: var(--white);
+        }
+        .hero-stats {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+        .stat-item p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Section Styles */
+        section { padding: 5rem 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-orange);
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Section */
+        .about { background: var(--white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        .about-content p {
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .value-item {
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-orange);
+            border-radius: 5px;
+        }
+        .value-item h4 {
+            color: var(--primary-orange);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .value-item p { font-size: 0.9rem; margin: 0; }
+        .about-image {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+            height: 500px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Products Section */
+        .products { background: var(--light-gray); }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-orange);
+        }
+        .product-card:hover::before { transform: scaleX(1); }
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .product-card p {
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .product-features { list-style: none; margin-top: 1rem; }
+        .product-features li {
+            padding: 0.3rem 0;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .product-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Industries Section */
+        .industries { background: var(--white); }
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .industry-card {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--light-gray);
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+        .industry-card:hover {
+            background: var(--primary-orange);
+            transform: translateY(-5px);
+        }
+        .industry-card:hover h3,
+        .industry-card:hover p { color: var(--white); }
+        .industry-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .industry-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .industry-card p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--text-dark) 100%);
+            color: var(--white);
+        }
+        .features .section-header h2 { color: var(--white); }
+        .features .section-header h2::after { background: var(--primary-orange); }
+        .features .section-header p { color: var(--gray); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .feature-item {
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .feature-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+        }
+        .feature-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        .feature-item p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us */
+        .why-us { background: var(--light-gray); }
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .why-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            transition: all 0.3s;
+        }
+        .why-card:hover .why-icon {
+            background: var(--primary-orange);
+            color: var(--white);
+        }
+        .why-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .why-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-orange);
+            padding: 1rem 3rem;
+        }
+        .btn-white:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            padding: 1rem 3rem;
+        }
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-orange);
+        }
+
+        /* Contact Section */
+        .contact { background: var(--white); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        .contact-info > p {
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        .contact-details { margin-bottom: 2rem; }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-orange);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .contact-item div h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+        .contact-item div p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+        .contact-form {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 10px;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .about-values { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .hero-content h1 { font-size: 1.8rem; }
+            .section-header h2 { font-size: 1.8rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header injected via JS -->
+    <header class="site-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">UNICUS<span>VISION</span></a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li class="dropdown">
+                <a href="#">Solutions ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="product-label-inspection.html">Label Inspection</a></li>
+                    <li><a href="product-code-readers.html">Code Readers</a></li>
+                    <li><a href="product-print-inspection.html">Print Inspection</a></li>
+                    <li><a href="product-soap-inspection.html">Soap Inspection</a></li>
+                    <li><a href="product-track-trace.html">Track & Trace</a></li>
+                    <li><a href="product-serialization.html">Serialization</a></li>
+                    <li><a href="product-document-digitisation.html">Document Digitisation</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Industries ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
+                    <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
+                    <li><a href="industry-cosmetics.html">Cosmetics</a></li>
+                    <li><a href="industry-fmcg.html">FMCG</a></li>
+                    <li><a href="industry-medical-devices.html">Medical Devices</a></li>
+                    <li><a href="industry-chemicals.html">Chemicals</a></li>
+                </ul>
+            </li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#why-us">Why Us</a></li>
+            <li><a href="contact.html" class="nav-cta">Get Quote</a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main style="margin-top: 70px;">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Precision Machine Vision for <span>Zero-Defect</span> Manufacturing</h1>
+                    <p class="hero-subtitle">
+                        Advanced inspection systems that ensure 100% quality control, regulatory compliance, and complete traceability across your production lines.
+                    </p>
+                    <div class="hero-features">
+                        <div class="hero-feature">Real-Time Inspection</div>
+                        <div class="hero-feature">99.99% Accuracy</div>
+                        <div class="hero-feature">Full Compliance</div>
+                    </div>
+                    <div class="cta-group">
+                        <a href="contact.html" class="btn btn-primary">Schedule Demo</a>
+                        <a href="#products" class="btn btn-secondary">Explore Solutions</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-stats">
+                        <div class="stat-item"><h3>500+</h3><p>Systems Installed</p></div>
+                        <div class="stat-item"><h3>99.99%</h3><p>Inspection Accuracy</p></div>
+                        <div class="stat-item"><h3>50+</h3><p>Countries Served</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3>Transforming Quality Control Through Intelligent Automation</h3>
+                        <p>
+                            Unicus Vision delivers cutting-edge machine vision and inspection solutions that empower manufacturers to achieve unprecedented levels of quality, efficiency, and compliance. Our advanced systems combine state-of-the-art cameras, intelligent sensors, and AI-powered software to detect defects, verify labels, read codes, and ensure product integrity on high-speed production lines.
+                        </p>
+                        <p>
+                            From pharmaceutical serialization to food packaging inspection, we provide end-to-end track & trace solutions that meet the most stringent regulatory requirements while maximizing your operational efficiency.
+                        </p>
+                        <div class="about-values">
+                            <div class="value-item"><h4>Innovation</h4><p>Continuous R&D investment in AI and machine learning</p></div>
+                            <div class="value-item"><h4>Reliability</h4><p>99.9% uptime guarantee on all systems</p></div>
+                            <div class="value-item"><h4>Compliance</h4><p>Full regulatory adherence worldwide</p></div>
+                            <div class="value-item"><h4>Support</h4><p>24/7 technical assistance & training</p></div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🏭</div>
+                            <h4 style="font-size: 1.8rem; margin-bottom: 1rem;">Industry-Leading Technology</h4>
+                            <p>Trusted by manufacturers worldwide for critical quality inspection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Solutions</h2>
+                    <p>Comprehensive machine vision and inspection systems designed for modern manufacturing challenges</p>
+                </div>
+                <div class="products-grid">
+                    <a href="product-label-inspection.html" class="product-card">
+                        <div class="product-icon">🏷️</div>
+                        <h3>Label Inspection Systems</h3>
+                        <p>Automated verification of label presence, position, content, and quality at production line speeds.</p>
+                        <ul class="product-features">
+                            <li>Multi-camera inspection</li>
+                            <li>OCR/OCV verification</li>
+                            <li>Color & print quality check</li>
+                            <li>Speeds up to 1000+ products/min</li>
+                        </ul>
+                    </a>
+                    <a href="product-code-readers.html" class="product-card">
+                        <div class="product-icon">📊</div>
+                        <h3>Code Readers</h3>
+                        <p>High-performance barcode, QR code, and data matrix readers with advanced OCR/OCV capabilities.</p>
+                        <ul class="product-features">
+                            <li>1D/2D code reading</li>
+                            <li>OCR/OCV validation</li>
+                            <li>Grade verification (ISO/IEC)</li>
+                            <li>Anti-collision algorithms</li>
+                        </ul>
+                    </a>
+                    <a href="product-print-inspection.html" class="product-card">
+                        <div class="product-icon">🖨️</div>
+                        <h3>Print Inspection Systems</h3>
+                        <p>Detect printing defects, color variations, and quality issues across flexible packaging and labels.</p>
+                        <ul class="product-features">
+                            <li>100% surface inspection</li>
+                            <li>Color registration control</li>
+                            <li>Defect classification</li>
+                            <li>Real-time alerts</li>
+                        </ul>
+                    </a>
+                    <a href="product-soap-inspection.html" class="product-card">
+                        <div class="product-icon">🧼</div>
+                        <h3>Soap Inspection Systems</h3>
+                        <p>Specialized inspection solutions for soap manufacturing including embossing and packaging QC.</p>
+                        <ul class="product-features">
+                            <li>Embossing clarity check</li>
+                            <li>Surface defect detection</li>
+                            <li>Shape & dimension verification</li>
+                            <li>Wrapper inspection</li>
+                        </ul>
+                    </a>
+                    <a href="product-track-trace.html" class="product-card">
+                        <div class="product-icon">🔗</div>
+                        <h3>Track & Trace Solutions</h3>
+                        <p>End-to-end serialization and aggregation systems for complete product visibility and compliance.</p>
+                        <ul class="product-features">
+                            <li>Level 1-5 aggregation</li>
+                            <li>Serial number management</li>
+                            <li>Supply chain visibility</li>
+                            <li>Anti-counterfeiting protection</li>
+                        </ul>
+                    </a>
+                    <a href="product-serialization.html" class="product-card">
+                        <div class="product-icon">🔢</div>
+                        <h3>Serialization Systems</h3>
+                        <p>Compliant serialization solutions for pharmaceutical, food, and consumer goods industries.</p>
+                        <ul class="product-features">
+                            <li>GS1 compliance</li>
+                            <li>Unique ID generation</li>
+                            <li>Database integration</li>
+                            <li>Regulatory reporting</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section id="industries" class="industries">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Industries We Serve</h2>
+                    <p>Tailored inspection solutions for diverse manufacturing sectors</p>
+                </div>
+                <div class="industries-grid">
+                    <a href="industry-pharmaceutical.html" class="industry-card">
+                        <div class="industry-icon">💊</div>
+                        <h3>Pharmaceutical</h3>
+                        <p>Serialization, track & trace, label verification</p>
+                    </a>
+                    <a href="industry-food-beverage.html" class="industry-card">
+                        <div class="industry-icon">🥫</div>
+                        <h3>Food & Beverage</h3>
+                        <p>Packaging inspection, code verification, QC</p>
+                    </a>
+                    <a href="industry-cosmetics.html" class="industry-card">
+                        <div class="industry-icon">🧴</div>
+                        <h3>Cosmetics</h3>
+                        <p>Label accuracy, print quality, packaging</p>
+                    </a>
+                    <a href="industry-fmcg.html" class="industry-card">
+                        <div class="industry-icon">📦</div>
+                        <h3>FMCG</h3>
+                        <p>High-speed inspection, code reading, aggregation</p>
+                    </a>
+                    <a href="industry-medical-devices.html" class="industry-card">
+                        <div class="industry-icon">🔬</div>
+                        <h3>Medical Devices</h3>
+                        <p>UDI compliance, traceability, defect detection</p>
+                    </a>
+                    <a href="industry-chemicals.html" class="industry-card">
+                        <div class="industry-icon">🧪</div>
+                        <h3>Chemicals</h3>
+                        <p>Hazmat labeling, safety compliance, tracking</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Key Advantages</h2>
+                    <p>Why our machine vision systems deliver superior results</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <h3>Zero-Defect Production</h3>
+                        <p>Achieve 100% inspection coverage with advanced camera systems and AI-powered defect detection. Eliminate recalls and protect your brand reputation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <h3>Regulatory Compliance</h3>
+                        <p>Meet FDA, EU FMD, DSCSA, GS1, and other global regulatory requirements with built-in compliance features and comprehensive audit trails.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <h3>High-Speed Performance</h3>
+                        <p>Inspect thousands of products per minute without compromising accuracy. Our systems keep pace with your fastest production lines.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">04</div>
+                        <h3>Seamless Integration</h3>
+                        <p>Easy integration with existing MES, ERP, and SCADA systems. Compatible with major PLCs and industrial protocols.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">05</div>
+                        <h3>Real-Time Analytics</h3>
+                        <p>Access live production data, quality metrics, and performance dashboards. Make data-driven decisions to optimize operations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">06</div>
+                        <h3>Scalable Architecture</h3>
+                        <p>Start with single-line inspection and scale to enterprise-wide track & trace networks. Our solutions grow with your business.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="why-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Unicus Vision</h2>
+                    <p>Partnership that drives your manufacturing excellence</p>
+                </div>
+                <div class="why-us-grid">
+                    <div class="why-card">
+                        <div class="why-icon">🎯</div>
+                        <h3>Proven Expertise</h3>
+                        <p>20+ years of experience in machine vision and industrial automation across 50+ countries worldwide.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">⚡</div>
+                        <h3>Rapid Deployment</h3>
+                        <p>Quick installation and commissioning with minimal production downtime. Get operational in weeks, not months.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🔧</div>
+                        <h3>Custom Solutions</h3>
+                        <p>Tailored systems designed for your specific products, line speeds, and quality requirements.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🛡️</div>
+                        <h3>Future-Proof Technology</h3>
+                        <p>Regular software updates and hardware upgrades ensure your investment stays current with evolving standards.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">👨‍</div>
+                        <h3>Expert Support</h3>
+                        <p>24/7 technical support, on-site service, comprehensive training, and remote diagnostics.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">💰</div>
+                        <h3>ROI Focused</h3>
+                        <p>Reduce waste, prevent recalls, improve efficiency, and achieve measurable ROI within 12-18 months.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Transform Your Quality Control?</h2>
+            <p>Join hundreds of manufacturers who trust Unicus Vision for critical inspection and traceability. Let's discuss how we can optimize your production lines.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-white">Request Free Consultation</a>
+                <a href="#" class="btn btn-outline-white">Download Brochure</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>Let's discuss your inspection challenges and design the perfect solution</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Let's Discuss Your Project</h3>
+                        <p>Ready to implement advanced machine vision inspection in your facility? Our experts are here to understand your challenges and design the perfect solution.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📍</div>
+                                <div>
+                                    <h4>Headquarters</h4>
+                                    <p>123 Industrial Park Drive<br>Manufacturing District, MD 21001</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">✉️</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>sales@unicusvision.com<br>support@unicusvision.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-item-icon">🕐</div>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>24/7 Technical Support Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name *</label>
+                                <input type="text" id="company" name="company" required placeholder="Your Company Inc.">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry">
+                                    <option value="">Select your industry</option>
+                                    <option value="pharma">Pharmaceutical</option>
+                                    <option value="food">Food & Beverage</option>
+                                    <option value="cosmetics">Cosmetics</option>
+                                    <option value="fmcg">FMCG</option>
+                                    <option value="medical">Medical Devices</option>
+                                    <option value="chemicals">Chemicals</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Requirements *</label>
+                                <textarea id="message" name="message" required placeholder="Tell us about your inspection challenges, production speed, and specific requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer injected via JS -->
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>UNICUS VISION</h3>
+                <p>Leading provider of advanced machine vision inspection systems and track & trace solutions for modern manufacturing industries worldwide.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="product-label-inspection.html">Label Inspection</a></li>
+                    <li><a href="product-code-readers.html">Code Readers</a></li>
+                    <li><a href="product-print-inspection.html">Print Inspection</a></li>
+                    <li><a href="product-soap-inspection.html">Soap Inspection</a></li>
+                    <li><a href="product-track-trace.html">Track & Trace</a></li>
+                    <li><a href="product-serialization.html">Serialization</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
+                    <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
+                    <li><a href="industry-cosmetics.html">Cosmetics</a></li>
+                    <li><a href="industry-fmcg.html">FMCG</a></li>
+                    <li><a href="industry-medical-devices.html">Medical Devices</a></li>
+                    <li><a href="industry-chemicals.html">Chemicals</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Unicus Vision. All rights reserved. | ISO 9001:2015 Certified | <a href="#">Privacy Policy</a></p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Load Header & Footer -->
+    <script>
+        Promise.all([
+            fetch('header.html').then(r => r.text()),
+            fetch('footer.html').then(r => r.text())
+        ]).then(([headerHTML, footerHTML]) => {
+            document.getElementById('header-container').innerHTML = headerHTML;
+            document.getElementById('footer-container').innerHTML = footerHTML;
+            
+            // Mobile menu toggle
+            document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+                const nav = document.querySelector('.nav-links');
+                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }).catch(err => console.error('Failed to load components:', err));
+
+        // Form submit handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            console.log('Form submitted:', data);
+            alert('Thank you! We will contact you shortly.');
+            e.target.reset();
+        }
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.style.opacity = '0';
+                    menu.style.visibility = 'hidden';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

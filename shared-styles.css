@@ -19,7 +19,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
 .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-orange); text-decoration: none; }
 .logo span { color: var(--gray); margin-left: 0.3rem; }
 .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
-.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.95rem; transition: var(--transition); padding: 0.5rem 0; }
+.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
 .nav-links a:hover, .nav-links .dropdown:hover > a { color: var(--primary-orange); }
 .nav-cta { background: var(--primary-orange); color: var(--white) !important; padding: 0.6rem 1.5rem; border-radius: 5px; font-weight: 600; }
 .nav-cta:hover { background: var(--dark-orange); }
@@ -48,3 +48,118 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height
 
 @media (max-width: 968px) { .nav-links { display: none; } .mobile-toggle { display: block; } .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .nav-container { padding: 0 1.5rem; } }
+
+/* ===== MOBILE NAVIGATION FIX ===== */
+@media (max-width: 968px) {
+    .mobile-toggle { 
+        display: block; 
+        z-index: 1001;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        border-top: 1px solid var(--light-gray);
+        display: none; /* Hidden by default */
+    }
+    
+    /* Active State for Main Menu */
+    .nav-links.active {
+        display: flex; /* Flex to stack items */
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li { width: 100%; }
+    
+    .nav-links > li > a { 
+        padding: 1rem 1.5rem; 
+        display: block; 
+        font-size: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+        color: var(--text-dark);
+    }
+    
+    .nav-cta {
+        margin: 1rem 1.5rem;
+        text-align: center;
+        display: block;
+    }
+
+    /* --- MOBILE DROPDOWN FIX --- */
+    .dropdown { position: static; }
+    
+    .dropdown > a {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        /* IMPORTANT: Enable clicking */
+        pointer-events: auto; 
+        cursor: pointer;
+    }
+    
+    /* The Arrow Indicator */
+    .dropdown > a::after { 
+        content: '▾'; 
+        font-size: 0.8rem; 
+        margin-left: 10px;
+        transition: transform 0.3s;
+    }
+    
+    /* Dropdown Menu Styles (Mobile) */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        margin: 0;
+        background: #f9f9f9; /* Slightly grey bg for sub-items */
+        min-width: 100%;
+        border: none;
+        box-shadow: none;
+        display: none; /* Hidden by default */
+    }
+    
+    /* Show Dropdown when .open class is added */
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown.open > a::after {
+        transform: rotate(180deg);
+    }
+    
+    /* Submenu Items */
+    .dropdown-menu li a {
+        padding: 0.8rem 1.5rem 0.8rem 2.5rem; /* Indented */
+        font-size: 0.95rem;
+        border-bottom: 1px solid #eee;
+        color: var(--dark-gray);
+    }
+    .dropdown-menu li a:hover {
+        background: #eee;
+        color: var(--primary-orange);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .nav-container { padding: 0 1.5rem; }
+}

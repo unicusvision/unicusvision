@@ -299,7 +299,8 @@
     </div>
 </footer>
     
-    <script>
+        <script>
+        // Load Header & Footer
         Promise.all([
             fetch('header.html').then(r => r.text()),
             fetch('footer.html').then(r => r.text())
@@ -307,27 +308,60 @@
             document.getElementById('header-container').innerHTML = headerHTML;
             document.getElementById('footer-container').innerHTML = footerHTML;
             
+            // Highlight current page in dropdown
+            const currentPage = location.pathname.split('/').pop();
             document.querySelectorAll('.dropdown-menu a').forEach(link => {
-                if(link.getAttribute('href') === 'industry-fmcg.html') {
+                if(link.getAttribute('href') === currentPage) {
                     link.style.color = 'var(--primary-orange)';
                     link.style.fontWeight = '600';
                 }
             });
             
-            document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
-                const nav = document.querySelector('.nav-links');
-                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-            });
+            initMobileMenu();
         }).catch(err => console.error('Failed to load components:', err));
         
+        // Mobile Menu Logic
+            // Mobile Menu Logic
+    function initMobileMenu() {
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        // Select the <a> tags that trigger dropdowns
+        const dropdownTriggers = document.querySelectorAll('.dropdown > a');
+        
+        if (!mobileToggle || !navLinks) return;
+        
+        // 1. Toggle main menu
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Stop click from bubbling to document
+            navLinks.classList.toggle('active');
+            mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // 2. Toggle dropdowns on mobile
+        dropdownTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                // Only interfere if we are in mobile view
+                if (window.innerWidth <= 968) {
+                    e.preventDefault(); // Stop the link from following '#'
+                    e.stopPropagation(); // Stop bubbling
+                    
+                    // Toggle the 'open' class on the parent <li>
+                    const parentDropdown = trigger.parentElement;
+                    parentDropdown.classList.toggle('open');
+                }
+            });
+        });
+        
+        // 3. Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.dropdown')) {
-                document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                    menu.style.opacity = '0';
-                    menu.style.visibility = 'hidden';
-                });
+            // If click is NOT inside the nav container
+            if (!e.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+                mobileToggle.textContent = '☰';
             }
         });
+    }
     </script>
 </body>
 </html>

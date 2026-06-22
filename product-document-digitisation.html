@@ -1,82 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="canonical" href="https://www.unicusvision.com/product-document-digitisation.html">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFEQV7346B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DFEQV7346B');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Digitisation & Translation | Unicus Vision</title>
-    <meta name="description" content="AI-powered document digitisation, OCR, and multilingual translation services for regulated industries. Secure, compliant, and workflow-integrated.">
+    <meta name="description"
+        content="AI-powered document digitisation, OCR, and multilingual translation services for regulated industries. Secure, compliant, and workflow-integrated.">
     <link rel="stylesheet" href="shared-styles.css">
     <style>
-        .page-hero { margin-top: 70px; background: linear-gradient(135deg, #f4f8fb 0%, var(--white) 100%); padding: 5rem 2rem; position: relative; overflow: hidden; }
-        .page-hero::before { content: ''; position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: var(--primary-orange); opacity: 0.06; border-radius: 50%; }
-        .hero-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .hero-text h1 { font-size: 2.8rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.2; }
-        .hero-text h1 span { color: var(--primary-orange); }
-        .hero-text p { font-size: 1.15rem; color: var(--dark-gray); margin-bottom: 2rem; }
-        .hero-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
-        .stat-badge { background: var(--white); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); text-align: center; }
-        .stat-badge strong { display: block; font-size: 1.8rem; color: var(--primary-orange); font-weight: 700; }
-        .stat-badge span { font-size: 0.9rem; color: var(--dark-gray); }
-        .hero-visual { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md); text-align: center; }
-        
-        section { padding: 5rem 2rem; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header h2 { font-size: 2.3rem; color: var(--text-dark); margin-bottom: 1rem; position: relative; display: inline-block; }
-        .section-header h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 70px; height: 4px; background: var(--primary-orange); }
-        .section-header p { font-size: 1.1rem; color: var(--dark-gray); max-width: 750px; margin: 1.5rem auto 0; }
-        
-        .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .use-case-card { background: var(--white); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow-sm); border-left: 4px solid var(--primary-orange); transition: var(--transition); }
-        .use-case-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .use-case-card h3 { font-size: 1.4rem; color: var(--text-dark); margin: 1rem 0; }
-        .industry-tag { display: inline-block; background: var(--light-gray); color: var(--primary-orange); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
-        .use-case-card ul { list-style: none; margin: 1.5rem 0; }
-        .use-case-card li { padding: 0.4rem 0; color: var(--dark-gray); padding-left: 1.5rem; position: relative; font-size: 0.95rem; }
-        .use-case-card li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-orange); font-weight: bold; }
-        .result-highlight { background: var(--light-gray); padding: 1rem 1.5rem; border-radius: 8px; margin-top: 1.5rem; font-weight: 600; color: var(--text-dark); }
-        .result-highlight span { color: var(--primary-orange); }
-        
-        .specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .spec-card { background: var(--light-gray); padding: 2rem; border-radius: 10px; text-align: center; }
-        .spec-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .spec-card h4 { color: var(--text-dark); margin-bottom: 0.5rem; font-size: 1.1rem; }
-        .spec-card p { color: var(--dark-gray); font-size: 0.95rem; }
-        
-        .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .benefit-item { display: flex; gap: 1.5rem; align-items: flex-start; }
-        .benefit-icon { width: 60px; height: 60px; background: var(--light-gray); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
-        .benefit-content h4 { color: var(--text-dark); margin-bottom: 0.5rem; font-size: 1.2rem; }
-        .benefit-content p { color: var(--dark-gray); font-size: 0.95rem; }
-        
-        .integration-section { background: var(--light-gray); }
-        .integration-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: center; }
-        .integration-item { padding: 2rem; background: var(--white); border-radius: 10px; box-shadow: var(--shadow-sm); }
-        .integration-item .logo-placeholder { font-size: 2rem; font-weight: 700; color: var(--primary-orange); margin-bottom: 1rem; }
-        
-        .product-cta { background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%); color: var(--white); text-align: center; padding: 5rem 2rem; }
-        .product-cta h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .product-cta p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 2.5rem; opacity: 0.95; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .btn { padding: 1rem 2.5rem; border: none; border-radius: 5px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: var(--transition); }
-        .btn-white { background: var(--white); color: var(--primary-orange); }
-        .btn-white:hover { background: var(--light-gray); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-        .btn-outline-white { background: transparent; color: var(--white); border: 2px solid var(--white); }
-        .btn-outline-white:hover { background: var(--white); color: var(--primary-orange); }
-        
-        .related-products { background: var(--white); }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .related-card { background: var(--light-gray); border-radius: 10px; padding: 2rem; text-align: center; transition: var(--transition); text-decoration: none; color: var(--text-dark); display: block; }
-        .related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); background: var(--white); }
-        .related-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .related-card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .related-card p { font-size: 0.9rem; color: var(--dark-gray); }
-        
-        @media (max-width: 968px) { .hero-content { grid-template-columns: 1fr; text-align: center; } .hero-stats { justify-content: center; } .use-cases-grid { grid-template-columns: 1fr; } }
-        @media (max-width: 600px) { .hero-text h1 { font-size: 2rem; } .section-header h2 { font-size: 1.8rem; } .cta-buttons { flex-direction: column; align-items: center; } .btn { width: 100%; max-width: 300px; } }
+        .page-hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, #f4f8fb 0%, var(--white) 100%);
+            padding: 5rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-orange);
+            opacity: 0.06;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-orange);
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-badge {
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+
+        .stat-badge strong {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        .stat-badge span {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        .hero-visual {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.3rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--primary-orange);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+            max-width: 750px;
+            margin: 1.5rem auto 0;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .use-case-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--primary-orange);
+            transition: var(--transition);
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .use-case-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin: 1rem 0;
+        }
+
+        .industry-tag {
+            display: inline-block;
+            background: var(--light-gray);
+            color: var(--primary-orange);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .use-case-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .use-case-card li {
+            padding: 0.4rem 0;
+            color: var(--dark-gray);
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .use-case-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        .result-highlight {
+            background: var(--light-gray);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .result-highlight span {
+            color: var(--primary-orange);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .spec-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .spec-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .spec-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .spec-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .benefit-content p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .integration-section {
+            background: var(--light-gray);
+        }
+
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .integration-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .integration-item .logo-placeholder {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .product-cta {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .product-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-cta p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-orange);
+        }
+
+        .btn-white:hover {
+            background: var(--light-gray);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--white);
+            color: var(--primary-orange);
+        }
+
+        .related-products {
+            background: var(--white);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .related-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            background: var(--white);
+        }
+
+        .related-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .related-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+        }
+
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header class="site-header">
     <div class="nav-container">
@@ -85,7 +453,7 @@
         <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li class="dropdown">
-                <a href="#">Solutions ▾</a>
+                <a href="#">Solutions</a>
                 <ul class="dropdown-menu">
                     <li><a href="product-label-inspection.html">Label Inspection</a></li>
                     <li><a href="product-code-readers.html">Code Readers</a></li>
@@ -98,7 +466,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Industries ▾</a>
+                <a href="#">Industries</a>
                 <ul class="dropdown-menu">
                     <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
                     <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
@@ -114,14 +482,16 @@
         </ul>
     </div>
 </header>
-    
+
     <main style="margin-top: 70px;">
         <!-- Hero Section -->
         <section class="page-hero">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Document Digitisation & Translation: <span>AI-Powered Accuracy</span> at Scale</h1>
-                    <p>Automated extraction, translation, and intelligent management of technical, regulatory, and commercial documents—ensuring compliance, multilingual precision, and seamless workflow integration across global operations.</p>
+                    <p>Automated extraction, translation, and intelligent management of technical, regulatory, and
+                        commercial documents ensuring compliance, multilingual precision, and seamless workflow
+                        integration across global operations.</p>
                     <div class="hero-stats">
                         <div class="stat-badge"><strong>99.5%</strong><span>OCR Accuracy</span></div>
                         <div class="stat-badge"><strong>50+</strong><span>Languages Supported</span></div>
@@ -135,12 +505,22 @@
                 </div>
                 <div class="hero-visual">
                     <div style="font-size: 5rem; margin-bottom: 1rem;">📄⚡</div>
-                    <p style="color: var(--dark-gray); font-weight: 500;">From paper to searchable, translated, and compliant digital assets</p>
-                    <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
-                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">AI OCR/ICR</span>
-                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Neural MT</span>
-                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Layout Retention</span>
-                        <span style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Audit Trails</span>
+                    <p style="color: var(--dark-gray); font-weight: 500;">From paper to searchable, translated, and
+                        compliant digital assets</p>
+                    <div
+                        style="margin-top: 1.5rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                        <span
+                            style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">AI
+                            OCR/ICR</span>
+                        <span
+                            style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Neural
+                            MT</span>
+                        <span
+                            style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Layout
+                            Retention</span>
+                        <span
+                            style="background: var(--light-gray); padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem;">Audit
+                            Trails</span>
                     </div>
                 </div>
             </div>
@@ -157,38 +537,46 @@
                     <div class="use-case-card">
                         <span class="industry-tag">Pharmaceutical</span>
                         <h3>Clinical & Regulatory Document Processing</h3>
-                        <p>A global pharma company needed to digitise and translate thousands of clinical trial reports, batch records, and CTD/eCTD submissions for multi-country regulatory filings.</p>
+                        <p>A global pharma company needed to digitise and translate thousands of clinical trial reports,
+                            batch records, and CTD/eCTD submissions for multi-country regulatory filings.</p>
                         <ul>
                             <li>AI-powered OCR with medical terminology recognition</li>
                             <li>ISO 17100-certified human-in-the-loop translation</li>
                             <li>Automated redaction of PII & sensitive data</li>
                             <li>Direct export to eCTD submission portals</li>
                         </ul>
-                        <div class="result-highlight">Result: <span>60% faster</span> regulatory submissions; <span>$1.2M/year saved</span> in manual translation & filing labor</div>
+                        <div class="result-highlight">Result: <span>60% faster</span> regulatory submissions;
+                            <span>$1.2M/year saved</span> in manual translation & filing labor
+                        </div>
                     </div>
                     <div class="use-case-card">
                         <span class="industry-tag">Manufacturing & Engineering</span>
                         <h3>Multi-Language SOP & Technical Manual Management</h3>
-                        <p>An industrial equipment manufacturer required rapid translation and digitisation of safety manuals, CAD documentation, and standard operating procedures for 15+ global markets.</p>
+                        <p>An industrial equipment manufacturer required rapid translation and digitisation of safety
+                            manuals, CAD documentation, and standard operating procedures for 15+ global markets.</p>
                         <ul>
                             <li>Layout-preserving translation (PDF/InDesign/FrameMaker)</li>
                             <li>Terminology consistency via custom translation memory</li>
                             <li>Automated version control & change tracking</li>
                             <li>Integration with PLM & DMS systems</li>
                         </ul>
-                        <div class="result-highlight">Result: <span>Zero compliance gaps</span> across regions; <span>85% reduction</span> in manual document update cycles</div>
+                        <div class="result-highlight">Result: <span>Zero compliance gaps</span> across regions,
+                            <span>85% reduction</span> in manual document update cycles
+                        </div>
                     </div>
                     <div class="use-case-card">
                         <span class="industry-tag">Logistics & Trade</span>
                         <h3>Cross-Border Customs & Compliance Documentation</h3>
-                        <p>A global logistics provider needed automated extraction and translation of bills of lading, customs declarations, and certificates of origin to accelerate cross-border shipments.</p>
+                        <p>A global logistics provider needed automated extraction and translation of bills of lading,
+                            customs declarations, and certificates of origin to accelerate cross-border shipments.</p>
                         <ul>
                             <li>Intelligent data extraction from scanned/faxed forms</li>
                             <li>Real-time translation with trade-specific glossaries</li>
                             <li>Automated validation against HS codes & regulations</li>
                             <li>Secure cloud repository with role-based access</li>
                         </ul>
-                        <div class="result-highlight">Result: <span>40% faster</span> customs clearance; <span>99.8% data accuracy</span> reducing shipment delays & penalties</div>
+                        <div class="result-highlight">Result: <span>40% faster</span> customs clearance, <span>99.8%
+                                data accuracy</span> reducing shipment delays & penalties</div>
                     </div>
                 </div>
             </div>
@@ -205,29 +593,36 @@
                     <div class="spec-card">
                         <div class="icon">🧠</div>
                         <h4>AI OCR & Data Extraction</h4>
-                        <p>Deep learning models for handwritten, typed, and stamped text; table extraction; form recognition; confidence scoring & validation rules</p>
+                        <p>Deep learning models for handwritten, typed, and stamped text, table extraction, form
+                            recognition, confidence scoring & validation rules</p>
                     </div>
                     <div class="spec-card">
                         <div class="icon">🌍</div>
                         <h4>Neural Machine Translation</h4>
-                        <p>Custom-trained models for technical, medical, and legal domains; translation memory & glossary enforcement; post-editing workflows</p>
+                        <p>Custom-trained models for technical, medical, and legal domains, translation memory &
+                            glossary enforcement, post-editing workflows</p>
                     </div>
                     <div class="spec-card">
                         <div class="icon">🔒</div>
                         <h4>Security & Compliance</h4>
-                        <p>GDPR, HIPAA, 21 CFR Part 11 compliant; AES-256 encryption; audit trails; digital signatures; on-prem or private cloud deployment</p>
+                        <p>GDPR, HIPAA, 21 CFR Part 11 compliant, AES-256 encryption, audit trails, digital
+                            signatures, on-prem or private cloud deployment</p>
                     </div>
                     <div class="spec-card">
                         <div class="icon">🔗</div>
                         <h4>Workflow Automation</h4>
-                        <p>API-first architecture; RPA integration; automated routing & approval workflows; SLA tracking; real-time dashboard analytics</p>
+                        <p>API-first architecture, RPA integration, automated routing & approval workflows, SLA
+                            tracking; real-time dashboard analytics</p>
                     </div>
                 </div>
-                <div style="margin-top: 3rem; background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
+                <div
+                    style="margin-top: 3rem; background: var(--white); padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
                     <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">Supported Document Types & Formats</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
                         <div>
-                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Input Formats</strong>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Input
+                                Formats</strong>
                             <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
                                 <li>• Scanned PDF, TIFF, JPG, PNG</li>
                                 <li>• Handwritten forms & faxes</li>
@@ -236,7 +631,8 @@
                             </ul>
                         </div>
                         <div>
-                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Output Formats</strong>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Output
+                                Formats</strong>
                             <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
                                 <li>• Searchable PDF/A, DOCX, XLSX</li>
                                 <li>• XML/JSON for system integration</li>
@@ -245,7 +641,8 @@
                             </ul>
                         </div>
                         <div>
-                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Quality Metrics</strong>
+                            <strong style="color: var(--primary-orange); display: block; margin-bottom: 0.5rem;">Quality
+                                Metrics</strong>
                             <ul style="list-style: none; color: var(--dark-gray); font-size: 0.9rem;">
                                 <li>• Character accuracy >99.5%</li>
                                 <li>• Layout fidelity preservation</li>
@@ -269,42 +666,48 @@
                         <div class="benefit-icon">⚡</div>
                         <div class="benefit-content">
                             <h4>Accelerate Global Time-to-Market</h4>
-                            <p>Automated translation & digitisation cuts documentation cycles from weeks to hours, enabling faster product launches and regulatory approvals.</p>
+                            <p>Automated translation & digitisation cuts documentation cycles from weeks to hours,
+                                enabling faster product launches and regulatory approvals.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">🎯</div>
                         <div class="benefit-content">
                             <h4>Regulatory-Grade Accuracy</h4>
-                            <p>ISO 17100-certified workflows with human expert review ensure technical, medical, and legal terminology meets strict compliance standards.</p>
+                            <p>ISO 17100-certified workflows with human expert review ensure technical, medical, and
+                                legal terminology meets strict compliance standards.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">🔄</div>
                         <div class="benefit-content">
                             <h4>Seamless System Integration</h4>
-                            <p>REST APIs, webhooks, and pre-built connectors for SAP, Oracle, SharePoint, and major DMS/PLM platforms—zero workflow disruption.</p>
+                            <p>REST APIs, webhooks, and pre-built connectors for SAP, Oracle, SharePoint, and major
+                                DMS/PLM platforms—zero workflow disruption.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">🛡️</div>
                         <div class="benefit-content">
                             <h4>Enterprise-Grade Security</h4>
-                            <p>End-to-end encryption, SOC 2 Type II compliance, and on-premise deployment options protect sensitive IP and regulated data.</p>
+                            <p>End-to-end encryption, SOC 2 Type II compliance, and on-premise deployment options
+                                protect sensitive IP and regulated data.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">📊</div>
                         <div class="benefit-content">
                             <h4>Intelligent Analytics & Reporting</h4>
-                            <p>Real-time dashboards track processing volume, translation quality, bottlenecks, and compliance status across global operations.</p>
+                            <p>Real-time dashboards track processing volume, translation quality, bottlenecks, and
+                                compliance status across global operations.</p>
                         </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon">💰</div>
                         <div class="benefit-content">
                             <h4>Measurable ROI & Cost Savings</h4>
-                            <p>Reduce manual labor by 70%+, eliminate translation agency markups, and avoid compliance penalties. Typical payback in 8–12 months.</p>
+                            <p>Reduce manual labor by 70%+, eliminate translation agency markups, and avoid compliance
+                                penalties. Typical payback in 8–12 months.</p>
                         </div>
                     </div>
                 </div>
@@ -319,10 +722,22 @@
                     <p>Connect with your existing document, quality, and translation management systems</p>
                 </div>
                 <div class="integration-grid">
-                    <div class="integration-item"><div class="logo-placeholder">SAP</div><p style="color: var(--dark-gray); font-size: 0.9rem;">DMS, PLM, GRC Modules</p></div>
-                    <div class="integration-item"><div class="logo-placeholder">ORACLE</div><p style="color: var(--dark-gray); font-size: 0.9rem;">UCM, Agile PLM</p></div>
-                    <div class="integration-item"><div class="logo-placeholder">MICROSOFT</div><p style="color: var(--dark-gray); font-size: 0.9rem;">SharePoint, Teams, Power Automate</p></div>
-                    <div class="integration-item"><div class="logo-placeholder">SDL/memoQ</div><p style="color: var(--dark-gray); font-size: 0.9rem;">Translation Memory, TMS</p></div>
+                    <div class="integration-item">
+                        <div class="logo-placeholder">SAP</div>
+                        <p style="color: var(--dark-gray); font-size: 0.9rem;">DMS, PLM, GRC Modules</p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="logo-placeholder">ORACLE</div>
+                        <p style="color: var(--dark-gray); font-size: 0.9rem;">UCM, Agile PLM</p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="logo-placeholder">MICROSOFT</div>
+                        <p style="color: var(--dark-gray); font-size: 0.9rem;">SharePoint, Teams, Power Automate</p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="logo-placeholder">SDL/memoQ</div>
+                        <p style="color: var(--dark-gray); font-size: 0.9rem;">Translation Memory, TMS</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -330,7 +745,8 @@
         <!-- CTA Section -->
         <section class="product-cta">
             <h2>Transform Your Document Workflow Today</h2>
-            <p>Get a free document assessment and ROI calculation. See how Unicus Vision can digitise, translate, and automate your compliance documentation.</p>
+            <p>Get a free document assessment and ROI calculation. See how Unicus Vision can digitise, translate, and
+                automate your compliance documentation.</p>
             <div class="cta-buttons">
                 <a href="contact.html" class="btn btn-white">Schedule Free Assessment</a>
                 <a href="#" class="btn btn-outline-white">Download Digitisation & Translation Guide</a>
@@ -364,7 +780,7 @@
             </div>
         </section>
     </main>
-    
+
     <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
@@ -418,8 +834,8 @@
         </div>
     </div>
 </footer>
-    
-        <script>
+
+    <script>
         // Load Header & Footer
         Promise.all([
             fetch('header.html').then(r => r.text()),
@@ -427,61 +843,62 @@
         ]).then(([headerHTML, footerHTML]) => {
             document.getElementById('header-container').innerHTML = headerHTML;
             document.getElementById('footer-container').innerHTML = footerHTML;
-            
+
             // Highlight current page in dropdown
             const currentPage = location.pathname.split('/').pop();
             document.querySelectorAll('.dropdown-menu a').forEach(link => {
-                if(link.getAttribute('href') === currentPage) {
+                if (link.getAttribute('href') === currentPage) {
                     link.style.color = 'var(--primary-orange)';
                     link.style.fontWeight = '600';
                 }
             });
-            
+
             initMobileMenu();
         }).catch(err => console.error('Failed to load components:', err));
-        
+
         // Mobile Menu Logic
-            // Mobile Menu Logic
-    function initMobileMenu() {
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        // Select the <a> tags that trigger dropdowns
-        const dropdownTriggers = document.querySelectorAll('.dropdown > a');
-        
-        if (!mobileToggle || !navLinks) return;
-        
-        // 1. Toggle main menu
-        mobileToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Stop click from bubbling to document
-            navLinks.classList.toggle('active');
-            mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-        });
-        
-        // 2. Toggle dropdowns on mobile
-        dropdownTriggers.forEach(trigger => {
-            trigger.addEventListener('click', (e) => {
-                // Only interfere if we are in mobile view
-                if (window.innerWidth <= 968) {
-                    e.preventDefault(); // Stop the link from following '#'
-                    e.stopPropagation(); // Stop bubbling
-                    
-                    // Toggle the 'open' class on the parent <li>
-                    const parentDropdown = trigger.parentElement;
-                    parentDropdown.classList.toggle('open');
+        // Mobile Menu Logic
+        function initMobileMenu() {
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            // Select the <a> tags that trigger dropdowns
+            const dropdownTriggers = document.querySelectorAll('.dropdown > a');
+
+            if (!mobileToggle || !navLinks) return;
+
+            // 1. Toggle main menu
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // Stop click from bubbling to document
+                navLinks.classList.toggle('active');
+                mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // 2. Toggle dropdowns on mobile
+            dropdownTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    // Only interfere if we are in mobile view
+                    if (window.innerWidth <= 968) {
+                        e.preventDefault(); // Stop the link from following '#'
+                        e.stopPropagation(); // Stop bubbling
+
+                        // Toggle the 'open' class on the parent <li>
+                        const parentDropdown = trigger.parentElement;
+                        parentDropdown.classList.toggle('open');
+                    }
+                });
+            });
+
+            // 3. Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                // If click is NOT inside the nav container
+                if (!e.target.closest('.nav-container')) {
+                    navLinks.classList.remove('active');
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+                    mobileToggle.textContent = '☰';
                 }
             });
-        });
-        
-        // 3. Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            // If click is NOT inside the nav container
-            if (!e.target.closest('.nav-container')) {
-                navLinks.classList.remove('active');
-                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
-                mobileToggle.textContent = '☰';
-            }
-        });
-    }
+        }
     </script>
 </body>
+
 </html>

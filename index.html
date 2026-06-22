@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <link rel="canonical" href="https://www.unicusvision.com/">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DFEQV7346B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DFEQV7346B');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unicus Vision - Advanced Machine Vision & Inspection Systems</title>
@@ -545,7 +554,7 @@
         <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li class="dropdown">
-                <a href="#">Solutions ▾</a>
+                <a href="#">Solutions</a>
                 <ul class="dropdown-menu">
                     <li><a href="product-label-inspection.html">Label Inspection</a></li>
                     <li><a href="product-code-readers.html">Code Readers</a></li>
@@ -558,7 +567,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Industries ▾</a>
+                <a href="#">Industries</a>
                 <ul class="dropdown-menu">
                     <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
                     <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
@@ -923,6 +932,14 @@
                                 <label for="message">Your Requirements *</label>
                                 <textarea id="message" name="message" required placeholder="Tell us about your inspection challenges, production speed, and specific requirements..."></textarea>
                             </div>
+                            <div class="form-honeypot" aria-hidden="true">
+                                <label for="website-home">Website</label>
+                                <input type="text" id="website-home" name="_website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <div class="form-group captcha-group">
+                                <div class="recaptcha-container"></div>
+                                <p class="captcha-error" hidden>Please complete the CAPTCHA verification.</p>
+                            </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                         </form>
                     </div>
@@ -1046,26 +1063,9 @@
         });
     }
 
-    // 3. Contact Form Handler (Specific to Index Page)
-    function handleFormSubmit(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        // Simulate sending state
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-        
-        // Simulate server delay
-        setTimeout(() => {
-            alert('Thank you! Your message has been received. A Unicus Vision specialist will contact you within 1 business day.');
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-        }, 1500);
-    }
 </script>
+    <script src="assets/js/form-config.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 </body>
 </html>

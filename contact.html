@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <link rel="canonical" href="https://www.unicusvision.com/contact.html">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DFEQV7346B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DFEQV7346B');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Unicus Vision | Machine Vision Solutions</title>
@@ -46,7 +55,7 @@
         <ul class="nav-links">
             <li><a href="index.html#about">About</a></li>
             <li class="dropdown">
-                <a href="#">Solutions ▾</a>
+                <a href="#">Solutions</a>
                 <ul class="dropdown-menu">
                     <li><a href="product-label-inspection.html">Label Inspection</a></li>
                     <li><a href="product-code-readers.html">Code Readers</a></li>
@@ -59,7 +68,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Industries ▾</a>
+                <a href="#">Industries</a>
                 <ul class="dropdown-menu">
                     <li><a href="industry-pharmaceutical.html">Pharmaceutical</a></li>
                     <li><a href="industry-food-beverage.html">Food & Beverage</a></li>
@@ -179,6 +188,14 @@
                         <input type="checkbox" id="consent" name="consent" required style="width: auto;">
                         <label for="consent" style="font-weight: 400; font-size: 0.9rem;">I agree to the <a href="#" style="color: var(--primary-orange);">Privacy Policy</a> and consent to be contacted about my inquiry.</label>
                     </div>
+                    <div class="form-honeypot" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="_website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="form-group captcha-group">
+                        <div class="recaptcha-container"></div>
+                        <p class="captcha-error" hidden>Please complete the CAPTCHA verification.</p>
+                    </div>
                     <button type="submit" class="btn-primary">Send Message</button>
                 </form>
             </div>
@@ -271,26 +288,6 @@
             });
         }).catch(err => console.error('Failed to load components:', err));
         
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            console.log('Contact form submitted:', data);
-            
-            // Show success message
-            const form = e.target;
-            const originalBtn = form.querySelector('button[type="submit"]');
-            originalBtn.disabled = true;
-            originalBtn.textContent = 'Sending...';
-            
-            setTimeout(() => {
-                alert('Thank you! Your message has been received. A Unicus Vision specialist will contact you within 1 business day.');
-                form.reset();
-                originalBtn.disabled = false;
-                originalBtn.textContent = 'Send Message';
-            }, 1500);
-        }
-        
         // Close dropdowns on outside click
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.dropdown')) {
@@ -301,5 +298,8 @@
             }
         });
     </script>
+    <script src="assets/js/form-config.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 </body>
 </html>

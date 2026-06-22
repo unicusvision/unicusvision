@@ -3,13 +3,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.mobile-toggle') || document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-links') || document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+    }
 
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

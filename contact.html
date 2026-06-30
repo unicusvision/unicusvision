@@ -267,26 +267,7 @@
 </footer>
     
     <script>
-        Promise.all([
-            fetch('header.html').then(r => r.text()),
-            fetch('footer.html').then(r => r.text())
-        ]).then(([headerHTML, footerHTML]) => {
-            document.getElementById('header-container').innerHTML = headerHTML;
-            document.getElementById('footer-container').innerHTML = footerHTML;
-            
-            // Highlight contact page in nav
-            document.querySelectorAll('.nav-cta').forEach(link => {
-                if(link.getAttribute('href') === 'contact.html') {
-                    link.style.background = 'var(--dark-orange)';
-                }
-            });
-            
-            // Mobile menu
-            document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
-                const nav = document.querySelector('.nav-links');
-                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-            });
-        }).catch(err => console.error('Failed to load components:', err));
+        initMobileMenu();
         
         // Close dropdowns on outside click
         document.addEventListener('click', (e) => {

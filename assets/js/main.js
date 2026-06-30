@@ -3,13 +3,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu
-    const hamburger = document.querySelector('.mobile-toggle') || document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-links') || document.querySelector('.nav-menu');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
     }
 

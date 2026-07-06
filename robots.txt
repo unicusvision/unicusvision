@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Sitemap (replace with your full site URL)
+Sitemap: https://unicusvision.com/sitemap.xml

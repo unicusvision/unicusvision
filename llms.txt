@@ -1,5 +1,5 @@
 # Unicus Vision - Machine Vision Inspection Systems
-# LLM Content Guide
+> LLM Content Guide
 
 ## About Unicus Vision
 Unicus Vision delivers advanced machine vision inspection, track & trace, serialization, and quality control systems for manufacturing industries. We provide end-to-end solutions that combine state-of-the-art cameras, intelligent sensors, and AI-powered software to detect defects, verify labels, read codes, and ensure product integrity on high-speed production lines.

@@ -1,0 +1,118 @@
+# Unicus Vision - Machine Vision Inspection Systems
+# LLM Content Guide
+
+## About Unicus Vision
+Unicus Vision delivers advanced machine vision inspection, track & trace, serialization, and quality control systems for manufacturing industries. We provide end-to-end solutions that combine state-of-the-art cameras, intelligent sensors, and AI-powered software to detect defects, verify labels, read codes, and ensure product integrity on high-speed production lines.
+
+## Core Products & Services
+
+### Inspection Systems
+- Label Inspection Systems - detect misalignment, missing labels, print defects, and quality issues at production line speeds
+- Print Inspection Systems - automated detection of print defects, color variations, and registration issues
+- Code Readers - high-speed barcode, QR code, and data matrix verification with OCR and OCV
+- Soap Inspection Systems - specialized systems for embossing, surface defects, and packaging quality control
+
+### Track & Trace Solutions
+- End-to-end traceability systems for product visibility and supply chain compliance
+- Serialization systems - generate, print, and verify unique identifiers for compliant track and trace
+- DSCSA-compliant solutions for pharmaceutical manufacturers
+- UDI-compliant systems for medical device manufacturers
+
+## Industry Solutions
+
+### Pharmaceutical
+- UDI serialization and track and trace compliance
+- Blister pack inspection and verification
+- Zero-defect quality control systems
+- DSCSA compliance support
+
+### Food & Beverage
+- Label and packaging inspection across production lines
+- Allergen label verification
+- Print quality control
+- Real-time traceability
+
+### Medical Devices
+- Sterile packaging inspection
+- UDI verification systems
+- Audit-ready quality control
+- Full product traceability
+
+### Chemicals
+- Hazmat labeling verification
+- Batch tracking and safety compliance
+- Production line quality control
+- Regulatory compliance
+
+### Cosmetics
+- Packaging quality verification
+- Label accuracy checking
+- Anti-counterfeiting features verification
+- Color consistency verification
+
+### FMCG
+- High-speed packaging inspection
+- Promotional material verification
+- Label verification on fast-moving production lines
+- Real-time traceability
+
+### Print & Leaflet
+- Leaflet folding and inspection
+- Insert presence verification
+- Print quality control
+- Regulatory compliance verification
+
+## Key Features & Benefits
+- 100% accuracy and quality control at production speed
+- AI-powered defect detection
+- Zero-defect manufacturing capability
+- Real-time production line compliance
+- Scales to thousands of products per minute
+- Regulatory compliance across industries
+- Supply chain traceability and transparency
+- Anti-counterfeiting and brand protection
+
+## Website Structure
+
+### Main Pages
+- https://www.unicusvision.com/ - Homepage with solutions overview
+- https://www.unicusvision.com/contact.html - Contact and demo request
+
+### Product Pages
+- https://www.unicusvision.com/product-label-inspection.html
+- https://www.unicusvision.com/product-print-inspection.html
+- https://www.unicusvision.com/product-code-readers.html
+- https://www.unicusvision.com/product-soap-inspection.html
+- https://www.unicusvision.com/product-track-trace.html
+- https://www.unicusvision.com/product-serialization.html
+- https://www.unicusvision.com/product-document-digitisation.html
+
+### Industry Pages
+- https://www.unicusvision.com/industry-pharmaceutical.html
+- https://www.unicusvision.com/industry-food-beverage.html
+- https://www.unicusvision.com/industry-medical-devices.html
+- https://www.unicusvision.com/industry-chemicals.html
+- https://www.unicusvision.com/industry-cosmetics.html
+- https://www.unicusvision.com/industry-fmcg.html
+- https://www.unicusvision.com/industry-print-leaflet.html
+
+## Contact Information
+Address: #402, Prestige Point, A-Wing, Off Mumbai Bangalore Highway, Warje, Pune, Maharashtra 411058, India
+Phone: +91-880-558-6426
+Email: sales@unicusvision.com
+
+## Social Media & Additional Resources
+- LinkedIn: https://www.linkedin.com/company/unicusvision/
+- Facebook: https://www.facebook.com/unicusvision
+- Twitter/X: https://x.com/UnicusVision
+- YouTube: https://www.youtube.com/channel/UCsRONzQ6COvqrmBxJKvzP9g
+- Sitemap: https://www.unicusvision.com/sitemap.xml
+
+## AI Crawling Guidelines
+- All pages use responsive design and are mobile-friendly
+- Content is structured with semantic HTML and schema.org markup
+- Key pages include JSON-LD structured data for organization and website information
+- Canonical tags are implemented on all pages to prevent duplicate content issues
+- All images use semantic alt text for accessibility and SEO
+- The site is fully static with no dynamic content or authentication barriers
+- All product and industry pages follow consistent information architecture
